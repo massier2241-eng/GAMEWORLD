@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 웹페이지-게임월드</title>
+    <style>
+        /* 1. 배경: 보라색-검정 그라데이션 (사장님 픽!) */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4b0082 0%, #000000 100%);
+            color: white;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            overflow: hidden;
+        }
+
+        /* 2. 제목 스타일 */
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+            letter-spacing: -1px;
+        }
+
+        /* 3. 버튼 스타일 */
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .main-btn {
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #8a2be2;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+        }
+
+        .main-btn:hover {
+            background: #8a2be2;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+            transform: translateY(-5px);
+        }
+
+        /* 4. AI 하단바 (나중에 제미나이 연동용) */
+        #ai-status {
+            position: fixed;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>나의 웹페이지를 만나보세요</h1>
+
+    <div class="btn-container">
+        <a href="https://massier2241-eng.github.io/fuck/" class="main-btn">5~30 나이별 IQ</a>
+        <a href="https://massier2241-eng.github.io/supernova/" class="main-btn">👋회사 게임👋(미완성)</a>
+        <a href="https://massier2241-eng.github.io/azit-company/" class="main-btn">🏢아지트 회사🏢</a>
+        <a href="https://ai.studio/apps/e52ed441-a642-4bc7-9042-d33891f5e0ad?fullscreenApplet=true" class="main-btn" style="border-color: #007bff;">$주식 전용 게임$</a>
+        <a href="https://ai.studio/apps/0dde2483-8a23-4cf6-809c-02f4ec1891e5?fullscreenApplet=true" class="main-btn" style="border-color: #007bff;">🤑가챠 게임🤑</a>
+        <a href="https://ai.studio/apps/c3b76eae-7741-4317-b786-156f0b32cd75?fullscreenApplet=true" class="main-btn" style="border-color: #007bff;">🤖Mass AI🤖(추천)</a>
+    </div>
+
+    <div id="ai-status">🏢버그 제보:massier2241@gmail.com 🏢버그 제보는 환영!^^</div>
+
+    <script>
+        // 버튼 누를 때 효과음이나 추가 로직이 필요하면 여기에!
+        document.querySelectorAll('.main-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log(btn.innerText + " 구역으로 이동합니다.");
+            });
+        });
+    </script>
+</body>
+</html>
